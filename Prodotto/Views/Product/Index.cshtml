@@ -1,0 +1,12 @@
+﻿@model List<ProductViewModel>
+
+<table border="1">
+    <tr><td>Nome Prodotto</td><td>Prezzo unitario</td><td>In Vendita</td><td></td></tr>
+    @foreach (ProductViewModel elemento in Model)
+    {
+<tr>
+    <td>@elemento.ProductName</td>
+    <td>@elemento.UnitPrice</td>
+    <td>@(elemento.Discontinued ? "Si" : "No")</td>
+</tr>}
+</table>
